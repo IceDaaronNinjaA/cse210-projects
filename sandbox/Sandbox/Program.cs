@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Sandbox World!");
+        Console.Write("Input your frist name");
+        string firstName = Console.ReadLine();
+        Console.WriteLine($"Your frist name is : {firstName}")
     }
 }
