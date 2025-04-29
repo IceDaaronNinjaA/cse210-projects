@@ -6,6 +6,5 @@ class Program
     {
         Console.WriteLine("Hello World!");
         Console.WriteLine("Hey how are you?");
-        Console.WriteLine("Changes");
     }
 }
