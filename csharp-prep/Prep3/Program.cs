@@ -28,10 +28,13 @@ class Program
         Console.Write("Give a magic number: ");
         magicNumberString = Console.ReadLine();
         magicNumber = int.Parse(magicNumberString);
-        Console.Write("What is your guess? :");
-        userInput = Console.ReadLine();
-        guessNumber = int.Parse(userInput);
-        guessOutcome = Guess(guess:guessNumber, magicNumber: magicNumber);
-        Console.Write(guessOutcome);
+        do
+        {
+            Console.Write("What is your guess? : ");
+            userInput = Console.ReadLine();
+            guessNumber = int.Parse(userInput);
+            guessOutcome = Guess(guess:guessNumber, magicNumber: magicNumber);
+            Console.WriteLine(guessOutcome);
+        }while (guessOutcome != "Your guess is Right on" );
     }
 }
