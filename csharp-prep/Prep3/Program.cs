@@ -22,12 +22,14 @@ class Program
     {   
         string userInput = "void";
         int magicNumber = 0;
-        string magicNumberString = "void";
+        //string magicNumberString = "void";
         int guessNumber = 1;
         string guessOutcome = "void";
-        Console.Write("Give a magic number: ");
-        magicNumberString = Console.ReadLine();
-        magicNumber = int.Parse(magicNumberString);
+        Random randomGenerator = new Random();
+        //Console.Write("Give a magic number: ");
+        //magicNumberString = Console.ReadLine();
+        magicNumber = randomGenerator.Next(1, 100);
+        //int.Parse(magicNumberString);
         do
         {
             Console.Write("What is your guess? : ");
