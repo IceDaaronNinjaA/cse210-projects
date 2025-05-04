@@ -2,8 +2,36 @@ using System;
 
 class Program
 {
-    static void Main(string[] args)
+    static string Guess(int guess, int magicNumber )
     {
-        Console.WriteLine("Hello Prep3 World!");
+        if (guess == magicNumber) 
+        {
+            return "Your guess is Right on";
+        }
+        else if (guess > magicNumber)
+        {
+            return "Your guess is higher";
+        } 
+        else 
+        {
+            return "Your guess is lower";
+        }
+
+    }   
+    static void Main(string[] args)
+    {   
+        string userInput = "void";
+        int magicNumber = 0;
+        string magicNumberString = "void";
+        int guessNumber = 1;
+        string guessOutcome = "void";
+        Console.Write("Give a magic number: ");
+        magicNumberString = Console.ReadLine();
+        magicNumber = int.Parse(magicNumberString);
+        Console.Write("What is your guess? :");
+        userInput = Console.ReadLine();
+        guessNumber = int.Parse(userInput);
+        guessOutcome = Guess(guess:guessNumber, magicNumber: magicNumber);
+        Console.Write(guessOutcome);
     }
 }
