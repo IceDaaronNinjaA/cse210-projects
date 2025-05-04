@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        //this and Prep 5 are unfinshed 
         string inputUser = "void";
         int numberFromUser = 0;
         List<int> numbers;
