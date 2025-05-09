@@ -1,0 +1,37 @@
+public class Job
+{
+    private string _company;
+    private string _jobTitle; 
+    private int _startYear;
+    private int _endYear;
+    
+    public  void SetEndYear(int endYear)
+    {
+
+        _endYear = endYear;
+    }
+    public  void SetCompany(string company)
+    {
+
+        _company = company;
+    }
+    public  void SetJobTitle(string jobTitle)
+    {
+
+        _jobTitle = jobTitle;
+    }
+    public  void SetStartYear(int startYear)
+    {
+
+        _startYear = startYear;
+    }
+    public void DesplayJobInfo()
+    {
+        
+        Console.Write($"{_jobTitle} ");
+        Console.Write($"({_company}) ");
+        Console.Write(_startYear);
+        Console.WriteLine($"- {_endYear}");
+    }
+    
+}

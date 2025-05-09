@@ -20,8 +20,10 @@ class Cylinder
     public double GetVolume()
     {
 
-        double radius = _circle.GetRadius();
-        return Math.PI * radius * radius * _height;
+        // double radius = _circle.GetRadius();
+        // return Math.PI * radius * radius * _height;
+        // same thing as above just better is what below
+        return _circle.GetArea() * -_height;
 
     }
 }

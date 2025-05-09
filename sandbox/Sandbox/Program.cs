@@ -16,9 +16,21 @@ class Program
         //     Console.WriteLine("Hello Dilan");
         // }
         Circle myCircle = new Circle();
-        myCircle.SetRadius(10);
+
+        Cylinder myCylinder = new Cylinder();
+
+            myCircle.SetRadius(10);
+
+            myCylinder.SetHeight(10);
+            myCylinder.SetCircle(myCircle);
+
         Console.WriteLine($"{myCircle.GetRadius()}");
+
         Console.WriteLine($"{myCircle.GetArea()}");
+
+        Console.WriteLine($"{myCylinder.GetVolume()}");
+
+
         
     }
 }
