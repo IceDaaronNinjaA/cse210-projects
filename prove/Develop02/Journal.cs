@@ -29,6 +29,6 @@ class Journal
     }
     public void AddEntry(JournalEntry entry)
     {
-
+        
     }
 }

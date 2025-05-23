@@ -15,11 +15,11 @@ class Program
         // {
         //     Console.WriteLine("Hello Dilan");
         // }
-        Circle myCircle = new Circle();
+        Circle myCircle = new Circle(10);
 
         Cylinder myCylinder = new Cylinder();
 
-            myCircle.SetRadius(10);
+            // myCircle.SetRadius(10);
 
             myCylinder.SetHeight(10);
             myCylinder.SetCircle(myCircle);

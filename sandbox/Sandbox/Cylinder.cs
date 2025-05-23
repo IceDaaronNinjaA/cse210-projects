@@ -7,6 +7,12 @@ class Cylinder
 
     private double _height;
 
+    public Cylinder()
+    {
+        _height = 0;
+        _circle = null;
+    }
+
     public void SetCircle(Circle circle)
     {
         _circle = circle;
