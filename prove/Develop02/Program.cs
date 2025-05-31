@@ -6,6 +6,7 @@ class Program
     static void Main(string[] args)
     {
         Journal Journal1 = new Journal();
+        Question QuestionList = new Question();
         string userInput = "none";
         int menuInput = 5;
         Console.WriteLine("Welcome to Journal Keeper");
@@ -22,7 +23,7 @@ class Program
             menuInput = int.Parse(userInput);
             if (menuInput == 1)
             {
-
+                
             }
             else if (menuInput == 2)
             {
