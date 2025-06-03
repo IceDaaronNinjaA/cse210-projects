@@ -11,11 +11,15 @@ class Program
         
         do{
             newScriptures.DisplayScripture();
-            Console.Write("Type quit to end or hit enter to remove 3 words:");
+            Console.Write("Type 'quit' to end, hit enter to remove 3 words, or type 'full' to see full scripture:");
             userInput = Console.ReadLine();
             if (userInput == "quit")
             {
                 loopEnd = 0;
+            }
+            else if(userInput == "full")
+            {
+                newScriptures.DisplayBackUpScripture();
             }
             else 
             {

@@ -2,6 +2,7 @@ class Scriptures
 {
     private Random randWords = new Random();
     private List<Word> _scripturesWords = new List<Word>();
+    private List<Word> _backUpScripture = new List<Word>();
     private Reference reference = new Reference();
 
     private void SplitTextIntoWords(string text)
@@ -11,7 +12,9 @@ class Scriptures
         foreach (string wordInText in words)
         {
             _scripturesWords.Add(new Word(wordInText));
+            _backUpScripture.Add(new Word(wordInText));
         }
+        
     }
 
     public Scriptures()
@@ -36,14 +39,35 @@ class Scriptures
     }
     public void DisplayScripture()
     {
+        DisplayScriptureboth(_scripturesWords);
+    }
+    public void DisplayBackUpScripture()
+    {
+        DisplayScriptureboth(_backUpScripture);
+    }
+    private void DisplayScriptureboth(List<Word> scripturesWords)
+    {
         reference.displayReferance();
-        foreach (Word forword in _scripturesWords)
+        foreach (Word forword in scripturesWords)
         {
             forword.desplayWord();
         }
     Console.WriteLine("");
+    Console.WriteLine("");
     }
     public void removeWords()
+    {
+        ifAllVoid();
+        int listIndex = (randWords.Next(_scripturesWords.Count));
+        _scripturesWords[listIndex].SetToVoid();
+        listIndex = (randWords.Next(_scripturesWords.Count));
+        _scripturesWords[listIndex].SetToVoid();
+        listIndex = (randWords.Next(_scripturesWords.Count));
+        _scripturesWords[listIndex].SetToVoid();
+
+
+    }
+    private void ifAllVoid()
     {
         int countOfVoid = 0;
         foreach (Word forword in _scripturesWords)
@@ -61,14 +85,6 @@ class Scriptures
             Console.WriteLine("no more words to remove");
             Environment.Exit(0);
         }
-        int listIndex = (randWords.Next(_scripturesWords.Count));
-        _scripturesWords[listIndex].SetToVoid();
-        listIndex = (randWords.Next(_scripturesWords.Count));
-        _scripturesWords[listIndex].SetToVoid();
-        listIndex = (randWords.Next(_scripturesWords.Count));
-        _scripturesWords[listIndex].SetToVoid();
-
-
     }
 
 }
