@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿class Progran
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("bob");
+    }
+}
