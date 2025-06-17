@@ -1,4 +1,4 @@
-class PoliceMan : person
+class PoliceMan : Person
 {
     private string _weapons;
     public PoliceMan(string firstName, string lastName, int Age, string weapons) :
@@ -10,5 +10,9 @@ class PoliceMan : person
     public string GetPoliceManInformation()
     {
         return $"Weapons: {_weapons} :: {GetPersonInformation()}";
+    }
+    public override string GetPersonInformation()
+    {
+        return $"I am a Police Man. Weapons: {_weapons} { base.GetPersonInformation()}";
     }
 }
