@@ -1,10 +1,15 @@
 class PoliceMan : Person
 {
     private string _weapons;
-    public PoliceMan(string firstName, string lastName, int Age, string weapons) :
+
+    private int _hoursWorked;
+    private double _hourlyWage;
+    public PoliceMan(string firstName, string lastName, int Age, string weapons,int hoursWorked , double HourlyWage) :
     base(firstName, lastName, Age)
     {
         _weapons = weapons;
+        _hoursWorked = hoursWorked;
+        _hourlyWage = HourlyWage;
     }
 
     public string GetPoliceManInformation()
@@ -13,6 +18,17 @@ class PoliceMan : Person
     }
     public override string GetPersonInformation()
     {
-        return $"I am a Police Man. Weapons: {_weapons} { base.GetPersonInformation()}";
+        return $"I am a Police Man. Weapons: {_weapons} {base.GetPersonInformation()}";
     }
+    public override double GetPay()
+    {
+        double pay = _hourlyWage * _hoursWorked;
+
+        if (_hoursWorked > 40)
+        {
+            pay += (_hoursWorked - 40) * _hourlyWage * 2;
+        }
+        return pay;
+    }
+    
 }

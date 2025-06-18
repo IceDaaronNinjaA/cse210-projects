@@ -1,10 +1,13 @@
 class Doctor : Person
 {
     private string _tools;
-    public Doctor(string firstName, string lastName, int Age, string tools) :
+
+    private double _salary;
+    public Doctor(string firstName, string lastName, int Age, string tools, double salary) :
     base(firstName, lastName, Age)
     {
         _tools = tools;
+        _salary = salary;
     }
 
     public string GetPoliceManInformation()
@@ -14,6 +17,11 @@ class Doctor : Person
 
     public override string GetPersonInformation()
     {
-        return $"I am a Doctor. Tools: {_tools} { base.GetPersonInformation()}";
+        return $"I am a Doctor. Tools: {_tools} {base.GetPersonInformation()}";
+    }
+    
+    public override double GetPay()
+    {
+        return _salary/ 12;
     }
 }
