@@ -7,7 +7,7 @@ class Program
         // Console.WriteLine("Hello Develop05 World!");
 
         Goals myGoals = new Goals();
-        myGoals.Create("save the world", "I have to say the world", 2000);
+        myGoals.Create("save the world", "I have to say the world", 2000, 1);
         myGoals.DisplayAll();
 
 
