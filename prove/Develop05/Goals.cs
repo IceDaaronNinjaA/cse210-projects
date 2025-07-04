@@ -20,18 +20,19 @@ class Goals
             SimpleGoal simpleGoal = new SimpleGoal(name, description, point);
             _GoalList.Add(simpleGoal);
         }
-        
+
     }
     public void Create(string name, string description, int point, int timeGoal, int bPoints)
     {
         CheckListGoal checklistGoal = new CheckListGoal(name, description, point, timeGoal, bPoints);
-            _GoalList.Add(checklistGoal);
+        _GoalList.Add(checklistGoal);
     }
     public void DisplayAll()
     {
         foreach (Goal goal in _GoalList)
         {
-            Console.WriteLine($"{goal.Display()}");
+            int index = _GoalList.IndexOf(goal);
+            Console.WriteLine($"{index}.{goal.Display()}");
         }
     }
     public void DisplayTotal()
@@ -60,7 +61,7 @@ class Goals
 
                     SimpleGoal simpleGoal = new SimpleGoal(part1, part2, part3int, part4int);
                     _GoalList.Add(simpleGoal);
-                    
+
                 }
                 else if (type == "Eternal")
                 {
@@ -111,5 +112,16 @@ class Goals
                 outputFile.WriteLine(goal.Save());
             }
         }
+    }
+    public void RecordEvent()
+    {
+        Console.Clear();
+        DisplayAll();
+        Console.Write("Which goal would you like to record a event for?:");
+        string userinput = Console.ReadLine();
+        int intUserInput = int.Parse(userinput);
+        Goal tempGoal = _GoalList[intUserInput];
+        int pointGain = tempGoal.RecordEvent();
+        _TotalPoints = _TotalPoints + pointGain;
     }
 }

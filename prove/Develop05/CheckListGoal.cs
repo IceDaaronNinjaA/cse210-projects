@@ -24,7 +24,7 @@ class CheckListGoal : Goal
     }
     public override string Display()
     {
-        return $"{ base.Display()} Goal: {_goalaim} Times Done: {_times}";
+        return $"{ base.Display()} Goal: {_goalaim} Times Done: {_times} Points gain when reached: {_bPoints}";
     }
 
     public override int RecordEvent()
