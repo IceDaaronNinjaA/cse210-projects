@@ -4,33 +4,46 @@ using System.Xml.Serialization;
 class Program
 
 {
-    static void TestByRef(int x, ref string n)
-    {
-        x++;
-        n += " plus betty";
-        Console.WriteLine($"In TestByRef: {x} {n}");
-    }
-    static void TestByOut(out int a)
-    {
-        a = 10101;
-        Console.WriteLine($"In TestByout: {a}");
-    }
+
+
+
+
+    // static void TestByRef(int x, ref string n)
+    // {
+    //     x++;
+    //     n += " plus betty";
+    //     Console.WriteLine($"In TestByRef: {x} {n}");
+    // }
+    // static void TestByOut(out int a)
+    // {
+    //     a = 10101;
+    //     Console.WriteLine($"In TestByout: {a}");
+    // }
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World");
 
-        int z = 10;
+        int? x = null;
+        string? name = null;
 
-        string name = "bob";
+        int y = x ?? 29;
+        name ??= "bob";
+        Console.WriteLine($"{y} {name}");
 
-        TestByRef(z, ref name);
-        Console.WriteLine($"In Main: {z} {name}");
+        
+    //     Console.WriteLine("Hello World");
 
-        int c;
+        //     int z = 10;
 
-        TestByOut(out c);
+        //     string name = "bob";
 
-        Console.WriteLine($"In Main: c is: {c}");
+        //     TestByRef(z, ref name);
+        //     Console.WriteLine($"In Main: {z} {name}");
+
+        //     int c;
+
+        //     TestByOut(out c);
+
+        //     Console.WriteLine($"In Main: c is: {c}");
         //     int duration = 12;
         //     DateTime currentTime = DateTime.Now;
         //     DateTime endTime = currentTime.AddSeconds(duration);
@@ -77,4 +90,4 @@ class Program
         //         Console.Write("\b");
         //     }
     }
-}
+    }
