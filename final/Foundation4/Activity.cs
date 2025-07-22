@@ -11,7 +11,12 @@ abstract class Activity
         _type = type;
     }
 
-    public abstract int getspeed();
-    public abstract int getpace();
-      public abstract int getdistance();
+    public abstract double getspeed();
+    public abstract double getpace();
+    public abstract double getdistance();
+
+    public virtual string getSummary()
+    {
+        return $"{_date} {_type}";
+    }
 }
