@@ -6,7 +6,7 @@ class Pool : Activity
 
     private double _time;
 
-    public Pool(int laps, double time, string date) : base(date, "Swimming")
+    public Pool(double laps, double time, string date) : base(date, "Swimming")
     {
         _laps = laps;
         _time = time;
